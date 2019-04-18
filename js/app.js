@@ -61,7 +61,7 @@ function cardShuffle(){
   fifteen.style.order = newArray[14];
   sixteen.style.order = newArray[15];
   seventeen.style.order = newArray[16];
-  eighteen.style.order = newArray[17];
+  eightteen.style.order = newArray[17];
   nineteen.style.order = newArray[18];
   twenty.style.order = newArray[19];
   twentyone.style.order = newArray[20];
@@ -86,25 +86,11 @@ function gameStart(){
   function delayFade(){
   startScreen.style.display = "none";
   }, 2000);
-
-  //timer
-  //delayed due to animations
-  setTimeout(function(){
-    function seconds(){
-      time--;
-      document.getElementById("countdown").innerText = "Time Left: " + time;
-      if(time == 0){
-        clearInterval(stop);
-      }
-    }
-    //stops timer at 0;
-    var stop = setInterval(function(){ seconds(); }, 1000);
-  }, 3000);
 }
 
 var firstFlip = 0;
 var secondFlip = 0;
-var thirdFlip =0;
+var thirdFlip = 0;
 var flipCounter = 0;
 var totalPoints = 0;
 
@@ -260,7 +246,7 @@ function cardCheck(x){
     document.getElementById("vv").style.transform = "rotateY(-180deg)";
   }
   
-  if(firstFlip == thirdFlip){
+  if(firstFlip == secondFlip && secondFlip == thirdFlip){
     var points = document.getElementById("points");
     console.log("match");
     if(firstFlip == 1){
@@ -307,40 +293,40 @@ function cardCheck(x){
       totalPoints++
       var yz = document.getElementById("thirteen");
       yz.style.animationPlayState = "running";
-      var aB = document.getElementById("fourteen");
-      aB.style.animationPlayState = "running";
-      var cD = document.getElementById("fifteen");
-      cD.style.animationPlayState = "running";
+      var aab = document.getElementById("fourteen");
+      aab.style.animationPlayState = "running";
+      var ccd = document.getElementById("fifteen");
+      ccd.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
     if(firstFlip == 6){
       totalPoints++
-      var eF = document.getElementById("sixteen");
-      eF.style.animationPlayState = "running";
-      var gH = document.getElementById("seventeen");
-      gH.style.animationPlayState = "running";
-      var iJ = document.getElementById("eighteen");
-      iJ.style.animationPlayState = "running";
+      var eef = document.getElementById("sixteen");
+      eef.style.animationPlayState = "running";
+      var ggh = document.getElementById("seventeen");
+      ggh.style.animationPlayState = "running";
+      var iij = document.getElementById("eighteen");
+      iij.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
     if(firstFlip == 7){
       totalPoints++
-      var kL = document.getElementById("nineteen");
-      kL.style.animationPlayState = "running";
-      var mN = document.getElementById("twenty");
-      mN.style.animationPlayState = "running";
-      var mN = document.getElementById("twentyone");
-      mN.style.animationPlayState = "running";
+      var kkl = document.getElementById("nineteen");
+      kkl.style.animationPlayState = "running";
+      var mmn = document.getElementById("twenty");
+      mmn.style.animationPlayState = "running";
+      var oop = document.getElementById("twentyone");
+      oop.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
     if(firstFlip == 8){
       totalPoints++
-      var oP = document.getElementById("twentytwo");
-      oP.style.animationPlayState = "running";
-      var qR = document.getElementById("twentythree");
-      qR.style.animationPlayState = "running";
-      var sT = document.getElementById("twentyfour");
-      sT.style.animationPlayState = "running";
+      var qqr = document.getElementById("twentytwo");
+      qqr.style.animationPlayState = "running";
+      var sst = document.getElementById("twentythree");
+      sst.style.animationPlayState = "running";
+      var ttu = document.getElementById("twentyfour");
+      ttu.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
     flipCounter = 0;
@@ -355,7 +341,7 @@ function cardCheck(x){
 
   setTimeout(
     function delay(){
-      if(flipCounter == 3 && firstFlip != thirdFlip){
+      if(flipCounter == 3 && firstFlip != secondFlip && secondFlip != thirdFlip){
         console.log("no match");
   flipCounter = 0;
   firstFlip = 0;
@@ -365,7 +351,7 @@ function cardCheck(x){
   var idFrontNames = ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y", "aa", "cc", "ee","gg", "ii", "kk", "mm", "oo", "qq", "ss", "uu"];
   var idBackNames = ["b", "d", "f", "h", "j", "l", "n", "p", "r", "t", "v", "x", "z", "bb", "dd", "ff", "hh", "jj", "ll", "nn", "pp", "rr", "tt", "vv"];
 
-  for(var zz = idFrontNames.length; zz > 0; zz--){
+  for(var jk = idFrontNames.length; jk > 0; jk--){
     frontId = idFrontNames.splice(0, 1)[0];
     backId = idBackNames.splice(0, 1)[0];
 
@@ -404,27 +390,27 @@ function cardCheck(x){
 }
 
 //checks amount of points at 0 seconds left
-setInterval(function(){
-  //loser animation
-  //make sure to change totalPoints < ? , the ? should be set to the mac points
-  if(totalPoints < 8 && time == 0){
-    var loser = document.getElementById("loser");
-    setTimeout(function(){
-      loser.style.display = "block";
-      loser.style.animationPlayState = "running";
+// setInterval(function(){
+//   //loser animation
+//   //make sure to change totalPoints < ? , the ? should be set to the mac points
+//   if(totalPoints < 8){
+//     var loser = document.getElementById("loser");
+//     setTimeout(function(){
+//       loser.style.display = "block";
+//       loser.style.animationPlayState = "running";
 
-      document.getElementById("wrapper").style.display = "none"; 
-    }, 1000);
-  }
-}, 1000);
+//       document.getElementById("wrapper").style.display = "none"; 
+//     }, 1000);
+//   }
+// }, 1000);
 }
 
 function gameOver(){
   var hinge = document.getElementById("hinge");
   hinge.style.animationPlayState = "running";
 
-  setTimeout(function(){
-  //reloads page
-  location.reload();
-  }, 2500);  
+  // setTimeout(function(){
+  // //reloads page
+  // location.reload();
+  // }, 2500);  
 }
