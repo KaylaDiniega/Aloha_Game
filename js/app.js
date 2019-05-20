@@ -249,7 +249,7 @@ function cardCheck(x){
   if(firstFlip == secondFlip && secondFlip == thirdFlip){
     var points = document.getElementById("points");
     console.log("match");
-    if(firstFlip == 1){
+    if(firstFlip == 0){
       totalPoints++
       var ab = document.getElementById("one");
       ab.style.animationPlayState = "running";
@@ -259,7 +259,7 @@ function cardCheck(x){
       ef.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
-    if(firstFlip == 2){
+    if(firstFlip == 1){
       totalPoints++
       var gh = document.getElementById("four");
       gh.style.animationPlayState = "running";
@@ -269,7 +269,7 @@ function cardCheck(x){
       kl.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
-    if(firstFlip == 3){
+    if(firstFlip == 2){
       totalPoints++
       var mn = document.getElementById("seven");
       mn.style.animationPlayState = "running";
@@ -279,7 +279,7 @@ function cardCheck(x){
       qr.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
-    if(firstFlip == 4){
+    if(firstFlip == 3){
       totalPoints++
       var st = document.getElementById("ten");
       st.style.animationPlayState = "running";
@@ -289,7 +289,7 @@ function cardCheck(x){
       wx.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
-    if(firstFlip == 5){
+    if(firstFlip == 4){
       totalPoints++
       var yz = document.getElementById("thirteen");
       yz.style.animationPlayState = "running";
@@ -299,7 +299,7 @@ function cardCheck(x){
       ccd.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
-    if(firstFlip == 6){
+    if(firstFlip == 5){
       totalPoints++
       var eef = document.getElementById("sixteen");
       eef.style.animationPlayState = "running";
@@ -309,7 +309,7 @@ function cardCheck(x){
       iij.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
-    if(firstFlip == 7){
+    if(firstFlip == 6){
       totalPoints++
       var kkl = document.getElementById("nineteen");
       kkl.style.animationPlayState = "running";
@@ -319,14 +319,14 @@ function cardCheck(x){
       oop.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
-    if(firstFlip == 8){
+    if(firstFlip == 7){
       totalPoints++
       var qqr = document.getElementById("twentytwo");
       qqr.style.animationPlayState = "running";
       var sst = document.getElementById("twentythree");
       sst.style.animationPlayState = "running";
-      var ttu = document.getElementById("twentyfour");
-      ttu.style.animationPlayState = "running";
+      var uuv = document.getElementById("twentyfour");
+      uuv.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
     }
     flipCounter = 0;

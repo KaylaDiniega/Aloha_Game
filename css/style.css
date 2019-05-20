@@ -193,6 +193,23 @@ web prefixes must be used to prevent errors
   filter: blur(1px);
 }
 
+.center {
+  position: absolute;
+  color: black;
+  background-color: white;
+  bottom: 8px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centert {
+  position: absolute;
+  color: black;
+  background-color: white;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #one, #two, #three{
   animation: cardFade 1s linear 0.5s forwards paused;
 }
